@@ -1,5 +1,13 @@
-function Results() {
-  return <div>ok</div>;
+import Thumbnail from "./Thumbnail";
+
+function Results({ results }) {
+  return (
+    <div className="px-5 my-10 sm:grid md:grid-cols-2 xl:grid-cols-3">
+      {results.map((res) => (
+        <Thumbnail key={res.id} result={res}></Thumbnail>
+      ))}
+    </div>
+  );
 }
 
 export default Results;
